@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#sec-1 {
+  background: url("images/Citi.jpg") left 10% bottom 70% / cover no-repeat
+    border-box;
+  width: 100%;
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main_items--top {
+  width: 100%;
+  text-align: left;
+}
+
+.main_items--top h1 {
+  width: 518px;
+  height: 164px;
+  letter-spacing: 4px;
+  line-height: 71px;
+  color: #ffffff;
+  font-family: "Bask Old Face";
+  font-size: 6.1rem;
+}
+
+.main_items--bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 0 3rem 2rem 0;
+}
+
+.main_item--bottom {
+  border: 1px solid #0305e9;
+  background-color: #0305e9;
+  border-radius: 2rem;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_items--bottom img {
+  width: 30px;
+  height: 30px;
+  margin-right: 0.5rem;
+}
+
+.main_items--bottom h3 {
+  color: white;
+  font-family: "Bask Old Face";
+  font-size: 1.5rem;
+}
+
+#sec-2 {
+  width: 100%;
+  margin-top: 5rem;
+
+  overflow: hidden;
+}
+
+.main__items {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 100%;
+  
+  transform: translateX(10%); 
+}
+
+.main__navigation--items {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin-right: 3rem;}
+
+.main__navigation--item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0 0 1rem;
+}
+
+.main__navigation--item h3 {
+  letter-spacing: 1px;
+  color: #2a2b2f;
+  font-family: "Century Gothic";
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.main__navigation--item:hover {
+  background-color: #b6c5dc;
+  color: #0c3065;
+  cursor: pointer;
+}
+
+.main-items-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 40%;
+  margin: 0;
+}
+
+.main-items-info h1 {
+  font-size: 5rem;
+  font-weight: 300;
+  color: #00025c;
+  margin: 0 0 1rem 0;
+}
+
+.main-items-info h2 {
+  font-size: 1.8rem;
+  line-height: 36px;
+  color: #505050;
+  font-style: italic;
+}
+
+.main-items-info p {
+  font-size: 1.6rem;
+  line-height: 40px;
+  color: #505050;
+  font-family: "Myriad Pro";
+}
+
+.main-items-info button {
+  color: white;
+  background-color: #00245c;
+  border: 1px solid #00245c;
+  border: none;
+  font-size: 1.5rem;
+  padding: 1rem;
+  outline: none;
+  cursor: pointer;
+  margin: 2rem 0;
+
+  transition: background-color 0.5s ease;
+}
+
+.main-items-info button::after {
+  content: "»";
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.main-items-info button:hover {
+  color: #00245c;
+  background-color: white;
+  border: 1px solid #00245c;
+
+  transition: color 0.5s ease,
+              background-color 0.5s ease,
+              border 0.5s ease;
+}
+
+.main-items-photo img {
+  height: 700px;
+  /* transform: translateX(40%); */
+}
