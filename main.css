@@ -6,6 +6,61 @@ body {
   margin: 0;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 130px;
+  height: 100%;
+  position: fixed;
+  background-color: white;
+  box-shadow: 10px 2px 1rem 2px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 4.2rem;
+  color: #2a2b2f;
+  font-family: "Bask Old Face";
+  margin: 4rem 0 0 0;
+
+  transform: rotate(-90deg) translateX(100%);
+}
+
+.burger__menu {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.burger {
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: #131313;
+
+  transform: translateY(-12rem);
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: #131313;
+}
+
+.burger::after {
+  transform: translateY(-16px);
+}
+
+.burger::before {
+  transform: translateY(16px);
+}
+
 #sec-1 {
   background: url("images/Citi.jpg") left 10% bottom 70% / cover no-repeat
     border-box;
@@ -30,6 +85,8 @@ body {
   color: #ffffff;
   font-family: "Bask Old Face";
   font-size: 6.1rem;
+
+  transform: translateX(50%);
 }
 
 .main_items--bottom {
@@ -74,15 +131,16 @@ body {
   align-items: flex-start;
   justify-content: space-evenly;
   width: 100%;
-  
-  transform: translateX(10%); 
+
+  transform: translateX(10%);
 }
 
 .main__navigation--items {
   width: 100%;
   list-style: none;
   padding: 0;
-  margin-right: 3rem;}
+  margin-right: 3rem;
+}
 
 .main__navigation--item {
   display: flex;
@@ -140,7 +198,6 @@ body {
   color: white;
   background-color: #00245c;
   border: 1px solid #00245c;
-  border: none;
   font-size: 1.5rem;
   padding: 1rem;
   outline: none;
@@ -161,12 +218,303 @@ body {
   background-color: white;
   border: 1px solid #00245c;
 
-  transition: color 0.5s ease,
-              background-color 0.5s ease,
-              border 0.5s ease;
+  transition: color 0.5s ease, background-color 0.5s ease, border 0.5s ease;
 }
 
 .main-items-photo img {
   height: 700px;
   /* transform: translateX(40%); */
+}
+
+#sec-3 {
+  width: 100%;
+  margin: 3rem 0;
+}
+
+.main__photo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.main__photo--items {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+}
+
+.main__photo--items li {
+  height: 390px;
+  margin: 0;
+}
+
+.main__photo--items img {
+  width: 595px;
+  height: 390px;
+  filter: invert(15%);
+  position: relative;
+}
+
+.main__photo--item h2 {
+  position: absolute;
+  font-size: 3.75rem;
+  color: #ffffff;
+  margin: 3rem 4rem;
+  z-index: 2;
+}
+
+.image-1 {
+  width: 590px;
+  height: 390px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.photo-1 {
+  width: 590px;
+  height: 390px;
+
+  transition: all 1s ease 0s;
+}
+
+.photo-1:hover {
+  transform: scale(1.1);
+  transition: all 1s ease 0s;
+}
+
+#sec-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 10rem auto;
+}
+
+.sec-4__top--items {
+  text-align: center;
+}
+
+.sec-4__top--items h2 {
+  color: #012760;
+  font-family: "Century Gothic";
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.sec-4__top--items h1 {
+  font-size: 5.8rem;
+  color: #3f3f3f;
+  margin-top: 0;
+}
+
+.main-elements {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery__items {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.gallery__item {
+  margin: 0 1.2rem;
+}
+
+.gallery__item img {
+  width: 114px;
+  height: 108px;
+  cursor: pointer;
+}
+
+.gallery__main--image img {
+  display: block;
+  width: 720px;
+  height: 480px;
+  cursor: pointer;
+}
+
+
+.open {
+  display: block !important;
+  width: 720px !important;
+  height: 480px !important;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.plan__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.plan__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+}
+
+.plan__item img {
+  width: 30px;
+  height: 30px;
+  margin-right: 0.5rem;
+}
+
+.plan__item h2 {
+  color: #00255c;
+  font-family: "Century Gothic";
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.main--plan__photo img {
+  width: 550px;
+  height: 480px;
+}
+
+#sec-5 {
+  width: 100%;
+  height: 100%;
+  background-color: #eeeeee;
+  padding: 4rem 0;
+}
+
+.blog__title {
+  font-size: 5.8rem;
+  color: #3f3f3f;
+  width: 100%;
+  text-align: center;
+}
+
+.blog__items {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  list-style: none;
+}
+
+.blog__item {
+  width: 450px;
+  background-color: white;
+}
+
+.blog__item img {
+  width: 450px;
+  height: 325px;
+}
+
+.blog__item h2 {
+  font-size: 3rem;
+  color: #2b2b2b;
+  margin: 0.5rem 0 0.5rem 2rem;
+}
+
+.blog__item p {
+  line-height: 33px;
+  color: #7f7f7f;
+  font-family: "Myriad Pro";
+  font-size: 1.5rem;
+  margin: 0.5rem 0 0.5rem 2rem;
+}
+
+.blog__item button {
+  color: #2b2d31;
+  border: none;
+  background-color: white;
+  font-size: 1.5rem;
+  outline: none;
+  cursor: pointer;
+  margin: 4rem 2rem;
+}
+
+.blog__item button::after {
+  content: "»";
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+#sec-6 {
+  width: 100%;
+  height: 780px;
+  margin-top: 5rem;
+  padding-left: 8rem;
+}
+
+footer {
+  background-color: #1f1f23;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem 2rem 2rem;
+}
+
+footer h2 {
+  color: #567cb4;
+  font-family: "Century Gothic";
+  font-size: 2.1rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+footer h1 {
+  font-size: 5.8rem;
+  margin-top: 0;
+  color: #bababa;
+}
+
+footer p {
+  font-family: "Myriad Pro";
+  font-size: 2.1rem;
+  color: #dbdbdb;
+  text-align: center;
+  width: 60%;
+}
+
+footer button {
+  color: white;
+  background-color: #00245c;
+  border: 1px solid #00245c;
+  font-size: 1.5rem;
+  padding: 1rem;
+  outline: none;
+  cursor: pointer;
+  margin: 5rem 0 3rem 0;
+}
+
+footer button::after {
+  content: "»";
+  margin-left: 1rem;
+  font-size: 1.5rem;
 }
