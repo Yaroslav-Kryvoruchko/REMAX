@@ -29,19 +29,22 @@ header h1 {
 }
 
 .burger__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   width: 50px;
   height: 50px;
   cursor: pointer;
+
+  transform: translateY(-12rem);
 }
 
 .burger {
-  position: absolute;
   width: 50px;
   height: 2px;
   background-color: #131313;
-
-  transform: translateY(-12rem);
+  transition: all 0.5s ease-in-out;
 }
 
 .burger::before,
@@ -51,14 +54,27 @@ header h1 {
   width: 50px;
   height: 2px;
   background-color: #131313;
+  transition: all 0.5s ease-in-out;
 }
 
 .burger::after {
-  transform: translateY(-16px);
+  transform: translateY(-12px);
 }
 
 .burger::before {
-  transform: translateY(16px);
+  transform: translateY(12px);
+}
+
+.burger__menu.open_menu .burger {
+  background: transparent;
+}
+
+.burger__menu.open_menu .burger::before {
+  transform: rotate(45deg) translate(0);
+}
+
+.burger__menu.open_menu .burger::after {
+  transform: rotate(-45deg) translate(0);
 }
 
 #sec-1 {
@@ -70,6 +86,163 @@ header h1 {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+
+.main__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+
+.info__one {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+
+  transform: rotate(180deg);
+}
+
+.line__one {
+  opacity: 0;
+  width: 0px;
+  height: 2px;
+  background-color: white;
+
+  transition: all 0.5s ease;
+  transform: rotate(90deg) translateX(134px);
+}
+
+.line__one h1 {
+  transform: rotate(90deg) translate(50px, -70px);
+  font-size: 2rem;
+  letter-spacing: 1px;
+  line-height: 42px;
+  color: #ffffff;
+  font-family: "Bask Old Face";
+}
+
+.info__items__one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.info__item__one {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.info__two {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+
+  transform: rotate(180deg);
+}
+
+.line__two {
+  opacity: 0;
+  width: 0px;
+  height: 2px;
+  background-color: white;
+
+  transition: all 0.5s ease;
+  transform: rotate(90deg) translateX(134px);
+}
+
+.line__two h1 {
+  transform: rotate(90deg) translate(50px, -70px);
+  font-size: 2rem;
+  letter-spacing: 1px;
+  line-height: 42px;
+  color: #ffffff;
+  font-family: "Bask Old Face";
+}
+
+.info__items__two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.info__item__two {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.info__tree {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+
+  transform: rotate(180deg);
+}
+
+.line__tree {
+  opacity: 0;
+  width: 0px;
+  height: 2px;
+  background-color: white;
+
+  transition: all 0.5s ease;
+  transform: rotate(90deg) translateX(134px);
+}
+
+.line__tree h1 {
+  transform: rotate(90deg) translate(50px, -70px);
+  font-size: 2rem;
+  letter-spacing: 1px;
+  line-height: 42px;
+  color: #ffffff;
+  font-family: "Bask Old Face";
+}
+
+.info__items__tree {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.info__item__tree {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.see {
+  opacity: 1;
+  width: 200px;
 }
 
 .main_items--top {
@@ -346,18 +519,96 @@ header h1 {
   cursor: pointer;
 }
 
-.gallery__main--image img {
+.gallery__main--image__one {
   display: block;
   width: 720px;
   height: 480px;
   cursor: pointer;
 }
 
+.gallery__main--image__two {
+  display: none;
+}
+
+.gallery__main--image__tree {
+  display: none;
+}
+
+.gallery__main--image__four {
+  display: none;
+}
+
+.gallery__main--image__five {
+  display: none;
+}
 
 .open {
-  display: block !important;
-  width: 720px !important;
-  height: 480px !important;
+  display: block;
+  width: 720px;
+  height: 480px;
+}
+
+.video {
+  display: none;
+  width: 760px;
+  height: 625px;
+}
+
+.main__video {
+  width: 760px;
+  height: 625px;
+}
+
+.video-360 {
+  display: none;
+  width: 760px;
+  height: 625px;
+}
+
+.video__360 {
+  width: 760px;
+  height: 625px;
+}
+
+.animation__open {
+  animation: anim_open 1s ease 0s forwards;
+}
+
+@keyframes anim_open {
+  0% {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.animation__close {
+  transform: translateX(-100%);
+  opacity: 0;
+
+  transition: all 0.5s ease 0s !important;
+}
+
+.item__photo {
+  background-color: #bdd6e8;
+  padding: 0.5rem;
+}
+
+.where_you--back {
+  background: none;
+  transition: background-color 0.5s ease !important;
+  padding: 0.5rem;
+}
+
+.where_you {
+  background-color: #bdd6e8;
+  padding: 0.5rem !important;
+
+  transition: background-color 0.5s ease !important;
 }
 
 .plan {
@@ -380,6 +631,9 @@ header h1 {
   align-items: center;
   justify-content: center;
   margin: 0 1rem;
+  padding: 0.5rem;
+
+  transition: background-color 0.5s ease !important;
 }
 
 .plan__item img {
@@ -388,16 +642,20 @@ header h1 {
   margin-right: 0.5rem;
 }
 
-.plan__item h2 {
+.plan__item button {
   color: #00255c;
   font-family: "Century Gothic";
   font-weight: bold;
   font-size: 21px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .main--plan__photo img {
-  width: 550px;
-  height: 480px;
+  width: 650px;
+  height: 530px;
 }
 
 #sec-5 {
@@ -406,6 +664,67 @@ header h1 {
   background-color: #eeeeee;
   padding: 4rem 0;
 }
+
+.blog__items__two {
+  display: none;
+  transform: translateX(-100%);
+  list-style: none;
+}
+
+.open__blog {
+  /* transform: translateX(0%) !important;
+
+  transition: all 0.5s ease 0.5s !important; */
+
+  animation: open-blog 1s ease 0s forwards;
+  opacity: 1;
+}
+
+@keyframes open-blog {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.close__blog {
+  opacity: 0 !important;
+
+  transition: all 0.5s ease !important;
+}
+
+.main--blog__items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow__left {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-top: 10px solid black;
+  border-right: 10px solid black;
+  cursor: pointer;
+
+  transform: rotate(45deg);
+}
+
+/* .arrow__right {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-top: 10px solid black;
+  border-right: 10px solid black;
+  cursor: pointer;
+
+  transform: rotate(-135deg);
+  z-index: 10;
+} */
 
 .blog__title {
   font-size: 5.8rem;
@@ -417,14 +736,15 @@ header h1 {
 .blog__items {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
+  justify-content: center;
+  /* width: 100%; */
   list-style: none;
 }
 
 .blog__item {
   width: 450px;
   background-color: white;
+  margin: 0 2rem;
 }
 
 .blog__item img {
@@ -454,12 +774,50 @@ header h1 {
   outline: none;
   cursor: pointer;
   margin: 4rem 2rem;
+  padding: 0;
+}
+
+.blog__item button::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  background-color: black;
+
+  transform: translateY(30px);
+  transition: width 0.5s ease 0s;
 }
 
 .blog__item button::after {
   content: "»";
   margin-left: 1rem;
   font-size: 1.5rem;
+}
+
+.blog__item button:hover::before {
+  width: 145px;
+
+  transition: all 0.5s ease 0s;
+}
+
+.two__line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line--one {
+  width: 100px;
+  height: 5px;
+  background-color: #009cd8;
+  margin: 2rem 1rem;
+}
+
+.line--two {
+  width: 100px;
+  height: 5px;
+  background-color: #dedede;
+  margin: 2rem 1rem;
 }
 
 #sec-6 {
@@ -511,10 +869,19 @@ footer button {
   outline: none;
   cursor: pointer;
   margin: 5rem 0 3rem 0;
+
+  transition: all 0.5s ease 0s;
 }
 
 footer button::after {
   content: "»";
   margin-left: 1rem;
   font-size: 1.5rem;
+}
+
+footer button:hover {
+  color: #00245c;
+  background-color: white;
+
+  transition: all 0.5s ease 0s;
 }
