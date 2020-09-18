@@ -19,6 +19,12 @@ header {
   z-index: 10;
 }
 
+.close_menu {
+  transform: translateX(-100%) !important;
+
+  transition: all 0.5s ease 0s !important;
+}
+
 header h1 {
   font-size: 4.2rem;
   color: #2a2b2f;
@@ -77,6 +83,44 @@ header h1 {
   transform: rotate(-45deg) translate(0);
 }
 
+.menu {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: fixed;
+  width: 30%;
+  height: 100%;
+  background-color: white;
+  z-index: 5;
+  padding-top: 4rem;
+
+  transform: translateX(-100%);
+  transition: all 0.5s ease 0s !important;
+  
+}
+
+.menu_items {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.menu_items h1 {
+  font-size: 4.2rem;
+  color: #2a2b2f;
+  font-family: "Bask Old Face";
+  margin: 0;
+}
+
+.menu_items .burger__menu {
+  transform: translateY(0) !important;  
+}
+
+.open-menu {
+  transform: translateX(0%);
+}
+
 #sec-1 {
   background: url("images/Citi.jpg") left 10% bottom 70% / cover no-repeat
     border-box;
@@ -105,7 +149,7 @@ header h1 {
   width: 100px;
   height: 100px;
 
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateY(-5rem);
 }
 
 .line__one {
@@ -153,7 +197,7 @@ header h1 {
   width: 100px;
   height: 100px;
 
-  transform: rotate(180deg);
+  transform: rotate(180deg) translate(0.5rem, 2rem);
 }
 
 .line__two {
@@ -201,7 +245,7 @@ header h1 {
   width: 100px;
   height: 100px;
 
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateY(8rem);
 }
 
 .line__tree {
@@ -667,7 +711,6 @@ header h1 {
 
 .blog__items__two {
   display: none;
-  transform: translateX(-100%);
   list-style: none;
 }
 
@@ -676,24 +719,35 @@ header h1 {
 
   transition: all 0.5s ease 0.5s !important; */
 
-  animation: open-blog 1s ease 0s forwards;
-  opacity: 1;
+  animation: open-blog 1s linear 0s forwards !important;
 }
 
 @keyframes open-blog {
   0% {
-    transform: translateX(-100%);
+    opacity: 0;
   }
 
   100% {
-    transform: translateX(0%);
+    opacity: 1;
   }
 }
 
 .close__blog {
-  opacity: 0 !important;
+  /* opacity: 0 !important;
 
-  transition: all 0.5s ease !important;
+  transition: all 0.5s ease !important; */
+
+  animation: close-blog 1s linear 0s forwards;
+}
+
+@keyframes close-blog {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .main--blog__items {

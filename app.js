@@ -117,11 +117,15 @@ video360Btn.addEventListener("click", videos360);
 //menu
 
 const menuBtn = document.querySelector(".burger__menu");
+const menu = document.querySelector('header');
+const itemMenu = document.querySelector('.menu');
 
 let menuOpen = false;
 
 menuBtn.addEventListener("click", () => {
   if (!menuOpen) {
+    itemMenu.classList.add('open-menu');
+    menu.classList.add('close_menu');
     menuBtn.classList.add("open_menu");
     menuOpen = true;
   } else {
