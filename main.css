@@ -17,6 +17,8 @@ header {
   background-color: white;
   box-shadow: 10px 2px 1rem 2px rgba(0, 0, 0, 0.3);
   z-index: 10;
+  
+  transition: all 0.5s ease 0s;
 }
 
 .close_menu {
@@ -90,7 +92,7 @@ header h1 {
   position: fixed;
   width: 30%;
   height: 100%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
   z-index: 5;
   padding-top: 4rem;
 
@@ -113,9 +115,56 @@ header h1 {
   margin: 0;
 }
 
-.menu_items .burger__menu {
-  transform: translateY(0) !important;  
+.burger__menu-two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
 }
+
+.burger-two {
+  width: 50px;
+  height: 2px;
+  background-color: #131313;
+  transition: all 0.5s ease-in-out;
+}
+
+.burger-two::before,
+.burger-two::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: #131313;
+  transition: all 0.5s ease-in-out;
+}
+
+.burger-two::after {
+  transform: translateY(-12px);
+}
+
+.burger-two::before {
+  transform: translateY(12px);
+}
+
+.burger__menu-two.open_menu-two .burger-two {
+  background: transparent;
+}
+
+.burger__menu-two.open_menu-two .burger-two::before {
+  transform: rotate(45deg) translate(0);
+}
+
+.burger__menu-two.open_menu-two .burger-two::after {
+  transform: rotate(-45deg) translate(0);
+}
+
+/* .menu_items .burger__menu-two {
+  transform: translateY(0) !important;  
+} */
 
 .open-menu {
   transform: translateX(0%);

@@ -117,88 +117,94 @@ video360Btn.addEventListener("click", videos360);
 //menu
 
 const menuBtn = document.querySelector(".burger__menu");
-const menu = document.querySelector('header');
-const itemMenu = document.querySelector('.menu');
+const menu = document.querySelector("header");
+const itemMenu = document.querySelector(".menu");
+const menuBtnTwo = document.querySelector(".burger__menu-two");
 
 let menuOpen = false;
 
 menuBtn.addEventListener("click", () => {
   if (!menuOpen) {
-    itemMenu.classList.add('open-menu');
-    menu.classList.add('close_menu');
-    menuBtn.classList.add("open_menu");
+    menu.classList.add("close_menu");
+    itemMenu.classList.add("open-menu");
+    menuBtnTwo.classList.add('open_menu-two')
     menuOpen = true;
-  } else {
-    menuBtn.classList.remove("open_menu");
+  }
+});
+
+menuBtnTwo.addEventListener('click', () => {
+  if(menuOpen === true) {
+    itemMenu.classList.remove("open-menu");
+    menu.classList.remove("close_menu");
     menuOpen = false;
   }
 });
 
 // top
 
-const one = document.querySelector('.info__items__one');
-const two = document.querySelector('.info__items__two');
-const tree = document.querySelector('.info__items__tree');
+const one = document.querySelector(".info__items__one");
+const two = document.querySelector(".info__items__two");
+const tree = document.querySelector(".info__items__tree");
 
-const lineOne = document.querySelector('.line__one');
-const lineTwo = document.querySelector('.line__two');
-const lineTree = document.querySelector('.line__tree');
+const lineOne = document.querySelector(".line__one");
+const lineTwo = document.querySelector(".line__two");
+const lineTree = document.querySelector(".line__tree");
 
-one.addEventListener('mouseover', () => {
-    lineOne.classList.add('see');
+one.addEventListener("mouseover", () => {
+  lineOne.classList.add("see");
 });
 
-one.addEventListener('mouseout', () => {
-    lineOne.classList.remove('see');
+one.addEventListener("mouseout", () => {
+  lineOne.classList.remove("see");
 });
 
-two.addEventListener('mouseover', () => {
-    lineTwo.classList.add('see');
+two.addEventListener("mouseover", () => {
+  lineTwo.classList.add("see");
 });
 
-two.addEventListener('mouseout', () => {
-    lineTwo.classList.remove('see');
+two.addEventListener("mouseout", () => {
+  lineTwo.classList.remove("see");
 });
 
-tree.addEventListener('mouseover', () => {
-    lineTree.classList.add('see');
+tree.addEventListener("mouseover", () => {
+  lineTree.classList.add("see");
 });
 
-tree.addEventListener('mouseout', () => {
-    lineTree.classList.remove('see');
+tree.addEventListener("mouseout", () => {
+  lineTree.classList.remove("see");
 });
 
-//blog 
+//blog
 
-const btnLeft = document.querySelector('.arrow__left');
-const itemBlogFirst = document.querySelector('.blog__items');
-const itemBlogSeconds = document.querySelector('.blog__items__two');
+const btnLeft = document.querySelector(".arrow__left");
+const itemBlogFirst = document.querySelector(".blog__items");
+const itemBlogSeconds = document.querySelector(".blog__items__two");
 
-const lineBlogOne = document.querySelector('.line--one');
-const lineBlogTwo = document.querySelector('.line--two');
+const lineBlogOne = document.querySelector(".line--one");
+const lineBlogTwo = document.querySelector(".line--two");
 
 let openBlog = false;
 
-btnLeft.addEventListener('click', () => {
-    if(!openBlog) {
-        itemBlogFirst.classList.add('close__blog');
-        itemBlogFirst.style.display = 'none';
-        itemBlogSeconds.classList.add('open__blog');
-        itemBlogSeconds.style.display = 'flex';
+btnLeft.addEventListener("click", () => {
+  if (!openBlog) {
+    itemBlogFirst.classList.add("close__blog");
+    itemBlogFirst.style.display = "none";
+    itemBlogSeconds.classList.add("open__blog");
+    itemBlogSeconds.style.display = "flex";
 
-        lineBlogOne.style.backgroundColor = '#dedede';
-        lineBlogTwo.style.backgroundColor = '#009cd8';
+    lineBlogOne.style.backgroundColor = "#dedede";
+    lineBlogTwo.style.backgroundColor = "#009cd8";
 
-        openBlog = true;
-    }else {
-        itemBlogFirst.classList.add('open__blog');
-        itemBlogFirst.style.display = 'flex';
-        itemBlogSeconds.classList.remove('open__blog');
-        itemBlogSeconds.style.display = 'none';
+    openBlog = true;
+  } else {
+    itemBlogFirst.classList.add("open__blog");
+    itemBlogFirst.style.display = "flex";
+    itemBlogSeconds.classList.remove("open__blog");
+    itemBlogSeconds.style.display = "none";
 
-        lineBlogOne.style.backgroundColor = '#009cd8';
-        lineBlogTwo.style.backgroundColor = '#dedede';
+    lineBlogOne.style.backgroundColor = "#009cd8";
+    lineBlogTwo.style.backgroundColor = "#dedede";
 
-        openBlog = false;
-    }
+    openBlog = false;
+  }
 });
